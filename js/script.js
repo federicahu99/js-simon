@@ -14,13 +14,13 @@
 
 // funzioni
 function getRandomnumber() {
-   
     while ( numberToMemorize.length < 5 ){
         let randomic= Math.floor(Math.random()* max -min) +min; 
+
         if (!numberToMemorize.includes(randomic)) {  //controllo se la bomba non è presente nell'array
             numberToMemorize.push(randomic);         // se NON è nella lista allora pusha.
         } 
-    return
+    }
 }
 
 // mi porto gli elementi dal DOM
