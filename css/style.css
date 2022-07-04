@@ -14,13 +14,21 @@ body {
     height: 60vh;
     margin: 50px auto;
     text-align: center;
-    
 }
 
-#remaing-sec {
+button {
+    padding: 5px 10px;
+    font-size: 20px;
+    color: dodgerblue;
+    border-color: dodgerblue;
+    background-color: paleturquoise;
+}
+
+#remaining-sec {
     font-size: 100px;
     color: red;
     text-shadow: 2px 2px darkred;
+    font-weight: bold;
 }
 
 #random-number {
@@ -36,3 +44,4 @@ body {
     color: dodgerblue;
     margin-top: 80px;
 }
+
