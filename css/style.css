@@ -7,6 +7,15 @@
     background-color: powderblue;
 }
 
+/* General */
+li {
+    display: inline-block;
+    font-size: 40px;
+    color: orange;
+    text-shadow: 2.5px 2.5px goldenrod;
+    margin-top: 60px;
+}
+
 /* Body */
 
 body {
@@ -29,14 +38,6 @@ button {
     color: red;
     text-shadow: 2px 2px darkred;
     font-weight: bold;
-}
-
-#random-number {
-    display: inline-block;
-    font-size: 50px;
-    color: orange;
-    text-shadow: 2.5px 2.5px goldenrod;
-    margin-top: 60px;
 }
 
 #rules {

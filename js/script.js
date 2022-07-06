@@ -15,7 +15,8 @@
 // funzioni
 function getRandomnumber() {
     while ( numberToMemorize.length < 5 ){
-        let randomic= Math.floor(Math.random()* max -min) +min; 
+        let randomic = 0;
+        randomic= Math.floor(Math.random()* max +1 - min) + min; 
 
         if (!numberToMemorize.includes(randomic)) {  //controllo se la bomba non è presente nell'array
             numberToMemorize.push(randomic);         // se NON è nella lista allora pusha.
@@ -24,24 +25,42 @@ function getRandomnumber() {
 }
 
 // mi porto gli elementi dal DOM
-const remainingSeconds = document.getElementById('remaing');
+let remainingSeconds = document.getElementById('remaining-sec');
 let randomNumber = document.getElementById('random-number');
 const start = document.getElementById('start');
+
+
+// far partire il timer 
+start.addEventListener ('click', function() {
+
+// numeri random
+    getRandomnumber(min=0, max=100)
+
+// partiamo da 30
+    let second = 30;
+    remainingSeconds.innerText = second;
+
+// decremento
+    setInterval(() => {
+    remainingSeconds.innerText = --second;
+   }, 1000)
+   setTimeout(() => {
+    remainingSeconds.innerText = 0;
+   }, 30000)
+
+   // fermo il countdown
+    
+    setInterval (() => {
+    if (remainingSeconds=0) {clearInterval(setTimeout)};
+    }, 30000);
+
+})
 
 // array di appoggio
 const numberToMemorize= [];
 console.log(numberToMemorize)
 
-// far partire il timer 
-start.addEventListener ('click', function() {
-// numeri random
- getRandomnumber(min=0, max=30)
-// partiamo da 30
-    const second = 30;
-    randomNumber.innerText = second;
-// decremento
-   setInterval(() => {
-    randomNumber.innerText = --second;
-   }, 30000)
+//porto in DOM
+randomNumber.innerText = numberToMemorize
 
-})
+
