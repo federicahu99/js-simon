@@ -34,7 +34,9 @@ const start = document.getElementById('start');
 start.addEventListener ('click', function() {
 
 // numeri random
-    getRandomnumber(min=0, max=100)
+    getRandomnumber(min=0, max=100);
+//porto in DOM
+    randomNumber.innerText = numberToMemorize
 
 // partiamo da 30
     let second = 30;
@@ -46,6 +48,7 @@ start.addEventListener ('click', function() {
    }, 1000)
    setTimeout(() => {
     remainingSeconds.innerText = 0;
+    randomNumber.classList.add('d-none')
    }, 30000)
 
    // fermo il countdown
@@ -58,9 +61,14 @@ start.addEventListener ('click', function() {
 
 // array di appoggio
 const numberToMemorize= [];
-console.log(numberToMemorize)
+console.log(numberToMemorize);
 
-//porto in DOM
-randomNumber.innerText = numberToMemorize
+setTimeout(() => {
+    for ( i = 0 ; i < numberToMemorize.lenght; i++); {
+    const answers= prompt( 'inserisci le risposte (uno alla volta):');
+    console.log(answers)
+    }
+   }, 32000)
+
 
 

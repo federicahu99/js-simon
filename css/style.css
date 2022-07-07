@@ -16,6 +16,10 @@ li {
     margin-top: 60px;
 }
 
+.d-none {
+    display: none;
+}
+
 /* Body */
 
 body {
@@ -40,9 +44,15 @@ button {
     font-weight: bold;
 }
 
+#random-number {
+    font-size: 30px;
+    color: goldenrod;
+}
+
 #rules {
     font-size: 30px;
     color: dodgerblue;
     margin-top: 80px;
 }
+
 
