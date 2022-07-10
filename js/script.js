@@ -25,7 +25,7 @@ function getRandomnumber() {
 }
 // array di appoggio
 const numberToMemorize= [];
-console.log(numberToMemorize);
+
 
 // mi porto gli elementi dal DOM
 let remainingSeconds = document.getElementById('remaining-sec');
@@ -38,8 +38,9 @@ start.addEventListener ('click', function() {
    
 // numeri random
     getRandomnumber(min=0, max=100);
-//porto in DOM
-    randomNumber.innerText = numberToMemorize
+//porto in DOM e console
+    randomNumber.innerText = numberToMemorize;
+    console.log(numberToMemorize);
 
 // partiamo da 30
     let second = 30;
@@ -64,24 +65,22 @@ start.addEventListener ('click', function() {
     const userAnswer= [];
 
     setTimeout(() => {
-        for (i= 1; i = numberToMemorize.length; i++ ) {
+
+        for (let i= 0; i < numberToMemorize.length; i++ ) {
             const answers= parseInt(prompt('scrivi i numeri uno alla volta:'))
             userAnswer.push(answers);
+            console.log(answers);
         }
-       }, 31000)
-
+       }, 30100)
        
-       //verifica di vittoria
-       
-       if(userAnswer == numberToMemorize) {
-           console.log('Hai perso');
-       } else {
-           console.log('Hai vinto')
+       for (let i = 0; i < numberToMemorize.length -1 ; i++) {
+        if (numberToMemorize[i] === (userAnswer[i])) {
+            console.log('hai vinto');
+        } else {
+            console.log('hai perso')
+        }
        }
-})
-
-
-
-
-
-
+    }, 30100)
+    
+    
+    
