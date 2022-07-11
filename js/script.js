@@ -53,13 +53,13 @@ start.addEventListener ('click', function() {
    setTimeout(() => {
     remainingSeconds.innerText = 0;
     randomNumber.classList.add('d-none')
-   }, 3000)
+   }, 30000)
 
    // fermo il countdown
     
     setInterval (() => {
     if (remainingSeconds=0) {clearInterval(setTimeout)};
-    }, 3000);
+    }, 30000);
 
 
     const userAnswer= [];
@@ -83,7 +83,7 @@ start.addEventListener ('click', function() {
             
         }
         console.log(`Hai totalizzato ${score} punti/o`)
-    }, 3100)
+    }, 30100)
 })
     
     
