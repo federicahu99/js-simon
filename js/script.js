@@ -53,13 +53,13 @@ start.addEventListener ('click', function() {
    setTimeout(() => {
     remainingSeconds.innerText = 0;
     randomNumber.classList.add('d-none')
-   }, 30000)
+   }, 3000)
 
    // fermo il countdown
     
     setInterval (() => {
     if (remainingSeconds=0) {clearInterval(setTimeout)};
-    }, 30000);
+    }, 3000);
 
 
     const userAnswer= [];
@@ -70,17 +70,20 @@ start.addEventListener ('click', function() {
             const answers= parseInt(prompt('scrivi i numeri uno alla volta:'))
             userAnswer.push(answers);
             console.log(answers);
-        }
-       }, 30100)
+        };
        
-       for (let i = 0; i < numberToMemorize.length -1 ; i++) {
-        if (numberToMemorize[i] === (userAnswer[i])) {
-            console.log('hai vinto');
-        } else {
-            console.log('hai perso')
+        let score = 0;
+        for (let i = 0; i < numberToMemorize.length; i++) {
+            
+            if (numberToMemorize.includes(userAnswer[i])) {
+                const point = score++;
+            } else {
+                console.log('hai perso')
+            }
+            
         }
-       }
-    }, 30100)
-    
+        console.log(`Hai totalizzato ${score} punti/o`)
+    }, 3100)
+})
     
     
